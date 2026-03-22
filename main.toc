@@ -1,0 +1,20 @@
+\contentsline {chapter}{摘\hskip 1em\relax 要}{I}{chapter*.1}%
+\contentsline {chapter}{\bfseries Abstract}{II}{chapter*.2}%
+\contentsline {chapter}{\numberline {1.}介绍和使用}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}如何使用}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}模版文件总览}{1}{subsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1.1}主文档}{1}{subsubsection.1.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1.2}中文摘要}{1}{subsubsection.1.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.1.3}英文摘要}{1}{subsubsection.1.1.1.3}%
+\contentsline {subsubsection}{\numberline {1.1.1.4}章节文档}{2}{subsubsection.1.1.1.4}%
+\contentsline {subsubsection}{\numberline {1.1.1.5}引用文档}{2}{subsubsection.1.1.1.5}%
+\contentsline {subsubsection}{\numberline {1.1.1.6}出版物文档}{2}{subsubsection.1.1.1.6}%
+\contentsline {subsubsection}{\numberline {1.1.1.7}致谢文档}{2}{subsubsection.1.1.1.7}%
+\contentsline {section}{\numberline {1.2}基本语法}{2}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}如何插入图片并引用}{2}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}如何插入表格并引用}{3}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}如何插入公式}{3}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}如何插入算法}{4}{subsection.1.2.4}%
+\contentsline {chapter}{致\hskip 1em\relax 谢}{5}{chapter*.7}%
+\contentsline {chapter}{参考文献}{5}{section*.6}%
+\contentsline {chapter}{本科期间学术成果}{6}{chapter*.8}%
