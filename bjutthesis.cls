@@ -107,7 +107,7 @@
 
 % page styles
 \def\bjut@header@text{北京工业大学毕业设计（论文）}
-\def\bjut@header@font{\fontsize{16.5bp}{11.5bp}\selectfont\lishu}
+\def\bjut@header@font{\fontsize{16bp}{11.5bp}\selectfont\lishu}
 \RequirePackage{fancyhdr}
 
 \fancypagestyle{bjut@headings}{
