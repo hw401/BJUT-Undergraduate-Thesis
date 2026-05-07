@@ -228,7 +228,7 @@
 % bibliography
 \RequirePackage[sort&compress]{gbt7714}
 \bibliographystyle{gbt7714-numerical}
-\renewcommand\bibfont{\zihao{5}}
+\renewcommand\bibfont{\zihao{-4}}
 \addtolength\bibsep{-3.5mm}
 
 
