@@ -7,21 +7,21 @@
 \RequirePackage[notintoc]{nomencl}
 
 %% Names
-\def\cabstractname{摘\quad 要}
-\def\ccontentsname{目\quad 录}
+\def\cabstractname{摘要}
+\def\ccontentsname{目录}
 \def\cnomname{术语表}
 \def\cconclusionname{结论}
 \def\cbibname{参考文献}
 \def\cappendixname{附录}
 \def\cpubname{本科期间学术成果}
-\def\cackname{致\quad 谢}
+\def\cackname{致谢}
 \def\clistfigurename{插图目录}
 \def\clisttablename{表格目录}
 \def\eabstractname{Abstract}
 \def\econtentsname{Contents}
 \def\enomname{Nomenclature}
 \def\echaptername{Chapter}
-\def\econclusionname{Conclusions}
+\def\econclusionname{Conclusion}
 \def\ebibname{References}
 \def\eappendixname{Appendix}
 \def\epubname{Publications}
@@ -31,14 +31,14 @@
 
 %% NEW Commands
 \NewDocumentCommand{\bichapter}{sO{}mm}{%
-    % O{} or #2 for set font of English chap entries in Chinese ToC with header normalfont
-    \IfBooleanTF{#1}
+  % O{} or #2 for set font of English chap entries in Chinese ToC with header normalfont
+  \IfBooleanTF{#1}
     {\chapter*{#2#3}
-        \markboth{#3}{}
-        \addcontentsline{toc}{chapter}{#2#3}
-        \addcontentsline{toe}{chapter}{\bfseries#4}}
+    \markboth{#3}{}
+    \addcontentsline{toc}{chapter}{#2#3}
+    \addcontentsline{toe}{chapter}{\bfseries#4}}
     {\chapter{#3}
-        \addcontentsline{toe}{chapter}{\bfseries\echaptername~\thechapter~~#4}}}
+    \addcontentsline{toe}{chapter}{\bfseries\echaptername~\thechapter~~#4}}}
 
 \NewDocumentCommand{\bisection}{mm}{%
     \section{#1}
@@ -57,7 +57,7 @@
 \renewcommand\contentsname\ccontentsname
 
 \newcommand{\makebitoc}{%
-    % 正确生成目录项，一般需要编译两次源代码。
+     % 正确生成目录项，一般需要编译两次源代码。
     {\zihao{-4}\linespread{1.53}\selectfont\tableofcontents}\normalsize
     %\addcontentsline{toc}{chapter}{\ccontentsname}
     %\addcontentsline{toe}{chapter}{\bfseries\econtentsname~(in Chinese)}
@@ -88,11 +88,11 @@
 \makenomenclature
 \let\oldprintnomenclature\printnomenclature
 \renewcommand\printnomenclature{%
-    \cleardoublepage
-    \phantomsection
-    \addcontentsline{toc}{chapter}{\cnomname}
-    \addcontentsline{toe}{chapter}{\bfseries\enomname}
-    \oldprintnomenclature}
+  \cleardoublepage
+  \phantomsection
+  \addcontentsline{toc}{chapter}{\cnomname}
+  \addcontentsline{toe}{chapter}{\bfseries\enomname}
+  \oldprintnomenclature}
 
 % ==== Reference
 \renewcommand\bibname\cbibname
@@ -101,10 +101,10 @@
     \phantomsection
     \addcontentsline{toc}{chapter}{\bibname}
     \addcontentsline{toe}{chapter}{\bfseries\ebibname}
-    \begin{spacing}{1.3}
-        \bibliography{#1}
+    \begin{spacing}{1.3} 
+    \bibliography{#1}
     \end{spacing}
-}
+  }
 
 %% ==== NEW Environments
 % ==== Abstract Environment
@@ -120,7 +120,7 @@
     \bichapter*{\cabstractname}{\eabstractname~(in Chinese)}
 }{\relax}
 \NewDocumentEnvironment{eabstract}{}{%
-    \bichapter*[\texorpdfstring{\fontspec{SimHei}[Path=./,Extension=.ttf]}{}]{\eabstractname}{\eabstractname}
+    \bichapter*[\bfseries]{\eabstractname}{\eabstractname}
 }{\relax}
 
 % ==== Conclusions Environment
@@ -137,4 +137,3 @@
 \NewDocumentEnvironment{acknowledgement}{}{%
     \bichapter*{\cackname}{\eackname}
 }{\relax}
-

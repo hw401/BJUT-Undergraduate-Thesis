@@ -13,6 +13,5 @@
 	\define@key{ez}{#1}{\csname ez#1\endcsname{##1}} }
 \NewDocumentCommand{\ezsetkeys}{m}{\kvsetkeys{ez}{#1} }
 
-\InputIfFileExists{ezinfo.cfg}%
+\InputIfFileExists{styles/ezinfo.cfg}%
 {\PackageInfo{ezinfo}{reading definitions from ezinfo.cfg}}{}%
-

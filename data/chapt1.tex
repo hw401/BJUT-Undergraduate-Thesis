@@ -2,43 +2,56 @@
 \linespread{1.08}\selectfont
 
 
-欢迎使用北京工业大学本科生毕业设计（论文）\LaTeX 模版。本模版是基于往届学长开源的北京工业大学研究生学位论文模板制作完成的，主体架构照搬了研究生论文的模板，作为乘凉的后人，我在此满怀感激地向前人的工作与努力致以诚挚的敬意。
+本章用于说明模板的组织方式与基本使用方法，帮助用户快速完成论文内容替换与结构调整。
 
-基于“北京工业大学本科生毕业设计（论文）撰写规范”，本模版对研究生模板的主要修改在于封面、行距、页边距、字体、“毕业设计（论文）诚信声明书”以及“关于论文使用授权的说明”的内容。
+本模板依据“北京工业大学本科生毕业设计（论文）撰写规范”进行配置，重点覆盖封面、页边距、行距、标题层级、页眉页脚、摘要与参考文献等核心版式要素。
+
+本模板基于 \color{red}{https://github.com/hw401/BJUT-Undergraduate-Thesis} 进行结构调整和内容优化，将所有内容归档，方便用户替换与管理。
 
 请使用\textbf{{\color{red}XeLaTex}}编译器编译\textbf{{\color{red}main.tex}}文件。
+
+经过本人2026毕设测试，在overleaf上编译大概率会发生\textbf{编译超时}，建议使用\textbf{TexPage}进行编译。
+
 请务必按照自己所在年份的具体要求撰写论文，如需微调模板具体设置，请修改\textbf{{\color{red}bjutthesis.cls}}的相关内容。
 
-2024年5月9日更新：document文件夹提供了2024年信息学部毕业设计管理系统发布的若干文件，在这里提醒所有使用该模板的同学注意查看，\textbf{{\color{red}比对并确认自己所在年份是否有特殊要求，请务必按要求进行论文撰写}}，以免造成不必要的麻烦。
+建议在提交前再次核对学院当年发布的补充要求，确保论文内容与格式均满足最新规定。
 
-
+\textbf{\color{red} {以下所有内容均满足2026年北京工业大学本科生毕业设计（论文）撰写规范}}
 
 \bisection{如何使用}{howtouse}\label{sec:fst}
 
 \subsection{模版文件总览}
-首先要明确的是，\LaTeX 出于安全的考虑，在unix环境下，往上一级目录写入编译时文件（如aux文件）时会被禁止。为了最大兼容
-性，当前版本的模版将所有的文件都放置在同一级目录下。（不排除某些tex的特殊编译设置或单独设置的环境变量）。\textbf{{\color{blue}图片可以放在二级目录，例如新建pics文件夹，使用“{bjutthesis/pics/XXX.pdf} ”添加图片}}。
+首先要明确的是，\LaTeX 出于安全的考虑，在unix环境下，往上一级目录写入编译时文件（如aux文件）时会被禁止。为了兼顾整洁与可维护性，当前版本将内容按目录拆分管理。建议将图片放在\verb|figures|目录，静态素材放在\verb|assets|目录。
 
 大多数用户使用时，都不必关注所有文件，只需了解如下几个文件：
 
 \begin{center}
   \begin{minipage}{0.95\textwidth}
     \begin{Verbatim}[frame=single]
-    主文档 : main.tex         中文摘要 : cabstract.tex
-    英文摘要 : eabstract.tex  章节文档 : chapt*.tex
-    引用文档 : reference.bib  用户出版物文档 : publication.tex
-    致谢文档 : acknowledge.tex
+    主文档 : main.tex         样式文件 : bjutthesis.cls
+    中文摘要 : data/cabstract.tex  英文摘要 : data/eabstract.tex
+    正文章节 : data/chapt*.tex      结论 : data/conclusion.tex
+    参考文献 : main.bib              致谢 : data/acknowledgement.tex
     \end{Verbatim}
   \end{minipage}
 \end{center}
 
 以上文档使用时，基本上只需填入文字内容即可，不需要考虑格式。
 
+\subsubsection{快速替换顺序}
+
+首次使用建议按以下顺序替换内容：
+\begin{itemize}
+  \item 先修改封面信息（\verb|bjutthesis.cls| 中 \verb|\makecover| 的题目、姓名、学号、导师、日期）。
+  \item 再填写摘要与关键词（\verb|data/cabstract.tex| 与 \verb|data/eabstract.tex|）。
+  \item 然后编写正文章节（\verb|data/chapt*.tex|）与结论（\verb|data/conclusion.tex|）。
+  \item 最后补全参考文献（\verb|main.bib|）与致谢（\verb|data/acknowledgement.tex|）。
+\end{itemize}
+
 % 文字\cite{Boutsidis2011}
 \subsubsection{主文档}
 
-
-主文档正文部分组织了论文结构，论文正文内容由\verb |chapt1.tex|, \verb|chapt2.tex|等组织。用户自行添加，参考章节文档一节。%（todo）
+主文档正文部分组织了论文结构，论文正文从\verb|main.tex|进入，在相应位置添加\text{\let\cleardoublepage\clearpage \include{data/chapt*}}，内容由\verb |chapt1.tex|, \verb|chapt2.tex|等组织。用户自行添加，参考章节文档一节。%（todo）
 
 \subsubsection{中文摘要}
 
@@ -95,7 +108,7 @@
     \begin{Verbatim}[frame=single]
 \begin{figure}[htpb]
   \centering
-  \includegraphics[width=0.8\textwidth]{bjut_logo_color.pdf}
+  \includegraphics[width=0.8\textwidth]{assets/bjut_logo_color.pdf}
   \caption{中文图题}
   \label{fig:logo}
 \end{figure}
@@ -107,7 +120,7 @@
 
 \begin{figure}[htpb]
   \centering
-  \includegraphics[width=0.8\textwidth]{bjut_logo_color.pdf}
+  \includegraphics[width=0.8\textwidth]{assets/bjut_logo_color.pdf}
   \caption{中文图题}
   \label{fig:logo}
 \end{figure}
