@@ -16,9 +16,6 @@
 *.cb2
 .*.lb
 
-# PDF result
-main.pdf
-
 ## Intermediate documents:
 *.dvi
 *.xdv
@@ -314,9 +311,4 @@ TSWLatexianTemp*
 # glossaries
 *.glstex
 
-# cursor files
-.cursor/
-.gitignore
-
-# VScode files
-.vscode/
+# End of https://www.toptal.com/developers/gitignore/api/latex
